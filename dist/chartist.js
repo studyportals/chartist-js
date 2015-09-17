@@ -1396,7 +1396,7 @@ var Chartist = {
      *   length: undefined,
      *
      *   constructor: function(length, sugar) {
-     *     Banana.super.constructor.call(this, 'Yellow', sugar);
+     *     Banana.superProto.constructor.call(this, 'Yellow', sugar);
      *     this.length = length;
      *   }
      * });
@@ -1430,7 +1430,7 @@ var Chartist = {
     };
 
     constr.prototype = proto;
-    constr.super = superProto;
+    constr.superProto = superProto;
     constr.extend = this.extend;
 
     return constr;
@@ -2798,7 +2798,7 @@ var Chartist = {
       max: this.bounds.max
     };
 
-    Chartist.AutoScaleAxis.super.constructor.call(this,
+    Chartist.AutoScaleAxis.superProto.constructor.call(this,
       axisUnit,
       chartRect,
       this.bounds.values,
@@ -2849,7 +2849,7 @@ var Chartist = {
       max: highLow.high
     };
 
-    Chartist.FixedScaleAxis.super.constructor.call(this,
+    Chartist.FixedScaleAxis.superProto.constructor.call(this,
       axisUnit,
       chartRect,
       this.ticks,
@@ -2888,7 +2888,7 @@ var Chartist = {
   'use strict';
 
   function StepAxis(axisUnit, data, chartRect, options) {
-    Chartist.StepAxis.super.constructor.call(this,
+    Chartist.StepAxis.superProto.constructor.call(this,
       axisUnit,
       chartRect,
       options.ticks,
@@ -3306,7 +3306,7 @@ var Chartist = {
    *
    */
   function Line(query, data, options, responsiveOptions) {
-    Chartist.Line.super.constructor.call(this,
+    Chartist.Line.superProto.constructor.call(this,
       query,
       data,
       defaultOptions,
@@ -3725,7 +3725,7 @@ var Chartist = {
    *
    */
   function Bar(query, data, options, responsiveOptions) {
-    Chartist.Bar.super.constructor.call(this,
+    Chartist.Bar.superProto.constructor.call(this,
       query,
       data,
       defaultOptions,
@@ -4056,7 +4056,7 @@ var Chartist = {
    * });
    */
   function Pie(query, data, options, responsiveOptions) {
-    Chartist.Pie.super.constructor.call(this,
+    Chartist.Pie.superProto.constructor.call(this,
       query,
       data,
       defaultOptions,
